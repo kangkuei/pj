@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Baxter SOS系統 | HD/PD利潤試算</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <head>
+      <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+      <link href="assets/css/akaiDev.css" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+      <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
+      <link href="assets/css/application.css" rel="stylesheet">
+      <link href="assets/css/akaiDev.css" rel="stylesheet"><!--CDN link -->
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/mobile-detect/0.4.3/mobile-detect.min.js"></script>
+      <style>
+        /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+        /* this chunk of css is not part of the toolkit :) */
+        body {
+            width: 1px;
+            min-width: 100%;
+            *width: 100%;
+        }
+      </style>
+    </head>
+  </head>
+  <body>
+    <nav class="iconav"><a class="iconav-brand" href="index.html"><span class="icon icon-cloud iconav-brand-icon"></span></a>
+      <div class="iconav-slider">
+        <ul class="nav nav-pills iconav-nav flex-md-column">
+          <li class="nav-item"><a class="nav-link active" href="index.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="返回首頁"><span class="icon icon-home"></span><small class="iconav-nav-label hidden-md-up">返回首頁</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="section01.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="利潤試算"><span class="icon icon-calculator"></span><small class="iconav-nav-label hidden-md-up">HD/PD利潤試算</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="section02.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="投資損益"><span class="icon icon-globe"></span><small class="iconav-nav-label hidden-md-up">HD/PD投資損益</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="section03.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="投資回收試算"><span class="icon icon-area-graph"></span><small class="iconav-nav-label hidden-md-up">HD/PD投資回收試算</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="section04.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="病患留院率"><span class="icon icon-list"></span><small class="iconav-nav-label hidden-md-up">HD/PD病患留院率</small></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="l-wrap">
+      <div class="l-main">
+        <section class="sample" id="el">
+          <div class="sample__hd"></div>
+          <div class="sample__bd"></div>
+          <div class="sample__ft"></div>
+          <section>
+            <div class="l-container">
+              <h2>{{initText}}</h2>
+              <div class="vue">
+                <form v-on:submit.prevent="signup">
+                  <select v-model="selectOpt">
+                    <option v-for="obj in selectLists" :disabled="obj.value == ''" v-bind:value="obj.value">{{obj.text}}</option>
+                  </select>
+                  <p>select Val : {{selectOpt}}</p>
+                  <button type="submit">submit</button>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="sample__content">
+              <div class="l-container">
+                <div class="l-vm">
+                  <div class="l-vm__content">
+                    <h2>demo verticle</h2>
+                    <p>灰色區塊內垂直置中</p>
+                    <div class="sprite__demo"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="l-container">
+              <div class="mdDemo">
+                <h2>#jade scss example</h2>
+                <div>
+                  <h3>##<span>Interpolation</span>by jade</h3>
+                </div>
+                <div>
+                  <h3>##jade loop</h3>
+                  <div class="row1"> 
+                    <p>row+1</p>
+                  </div>
+                  <div class="row2"> 
+                    <p>row+2</p>
+                  </div>
+                  <div class="row3"> 
+                    <p>row+3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!--render main view-->
+      </div>
+    </div>
+    <div class="l-footer footer">
+      <div class="l-container">
+        <p>footer</p>
+      </div>
+    </div>
+  </body>
+</html>

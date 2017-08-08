@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Baxter SOS系統 | PD利潤試算</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <head>
+      <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+      <link href="assets/css/akaiDev.css" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+      <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
+      <link href="assets/css/application.css" rel="stylesheet">
+      <link href="assets/css/akaiDev.css" rel="stylesheet"><!--CDN link -->
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/mobile-detect/0.4.3/mobile-detect.min.js"></script>
+      <style>
+        /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+        /* this chunk of css is not part of the toolkit :) */
+        body {
+            width: 1px;
+            min-width: 100%;
+            *width: 100%;
+        }
+      </style>
+    </head>
+    <title>Baxter SOS系統 | PD利潤試算</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+  </head>
+  <body>
+    <nav class="iconav"><a class="iconav-brand" href="index.html"><span class="icon icon-cloud iconav-brand-icon"></span></a>
+      <div class="iconav-slider">
+        <ul class="nav nav-pills iconav-nav flex-md-column">
+          <li class="nav-item"><a class="nav-link active" href="index.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="返回首頁"><span class="icon icon-home"></span><small class="iconav-nav-label hidden-md-up">返回首頁</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="section01.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="利潤試算"><span class="icon icon-calculator"></span><small class="iconav-nav-label hidden-md-up">HD/PD利潤試算</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="section02.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="投資損益"><span class="icon icon-globe"></span><small class="iconav-nav-label hidden-md-up">HD/PD投資損益</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="section03.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="投資回收試算"><span class="icon icon-area-graph"></span><small class="iconav-nav-label hidden-md-up">HD/PD投資回收試算</small></a></li>
+          <li class="nav-item"><a class="nav-link" href="section04.html" title="" data-toggle="tooltip" data-placement="right" data-container="body" data-original-title="病患留院率"><span class="icon icon-list"></span><small class="iconav-nav-label hidden-md-up">HD/PD病患留院率</small></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="col-md-12">
+        <div class="dashhead mb-1">
+          <div class="dashhead-titles">
+            <h6 class="dashhead-subtitle">PD 利潤試算</h6>
+            <h2 class="dashhead-title"> HD/PD Profit spreadsheet</h2>
+          </div>
+        </div>
+        <!-- 標籤功能-->
+        <!--
+        <div class="hr-divider mb-4">
+        <ul class="nav nav-pills hr-divider-content hr-divider-nav">
+        <li class="nav-item">
+        <a class="nav-link active" href="#"><span class="icon icon-calculator"></span> HD試算</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#"><span class="icon icon-calculator"></span> PD試算</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#"><span class="icon icon-time-slot"></span> HD/PD 試算比較</a>
+        </li>
+        </ul>
+        </div>
+        -->
+        <!-- 標籤-->
+        <ul class="nav nav-bordered mt-4 mt-md-2 mb-0 clearfix" role="tablist">
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#seciton01_1" role="tab" data-toggle="tab" aria-controls="hd" aria-expanded="true"><span class="icon icon-calculator"></span> HD試算</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link active" href="#seciton01_2" role="tab" data-toggle="tab" aria-controls="pd" aria-expanded="false"><span class="icon icon-calculator"></span> PD試算</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#seciton01_3" role="tab" data-toggle="tab" aria-controls="hdvspd" aria-expanded="false"><span class="icon icon-time-slot"></span> HD/PD 試算比較</a></li>
+        </ul>
+        <hr class="mt-0 mb-4">
+        <!-- 麵包屑-->
+        <!--
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><span class="icon icon-calculator"></span> HD試算</a></li>
+        <li class="breadcrumb-item active">開始試算</li>
+        </ol>
+        -->
+        <div class="tab-content">
+          <!-- seciton01_1-->
+          <div class="tab-pane active" id="seciton01_1" role="tabpanel" aria-expanded="true"></div>
+          <!-- seciton01_2-->
+          <div class="tab-pane active" id="seciton01_2" role="tabpanel" aria-expanded="false">
+            <div class="row">
+              <!--健保給付-->
+              <div class="col-lg-12 mb-4">
+                <div class="row">
+                  <div class="list-group col-lg-12 mb-3">
+                    <h6><span class="icon icon-leaf"></span>健保給付</h6>
+                  </div>
+                  <div class="list-group col-lg-4 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success"><span class="icon icon-shopping-bag"></span>追蹤處置費</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">醫護人員費<span class="text-muted">-</span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">特殊材料費<span class="text-muted">-</span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between"><span class="text-left">醫材耗品費</span><span class="text-muted">00000000000000000000000000000</span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">檢查費<span class="text-muted">999</span></div>
+                  </div>
+                  <div class="list-group col-lg-4 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success">
+                        <!-- <span class="icon icon-drop"></span>--><span class="icon icon-shopping-bag"></span>腹膜透析液(incl. Cassette, 租金)</small><small class="delta-indicator text-danger">使用比例</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between"><span>人工腎臟－REUSE</span>
+                      <input class="col-md-4 form-control text-left" type="text" placeholder="0"><span>1.5L</span>
+                    </div>
+                  </div>
+                  <div class="list-group col-lg-4 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success"><span class="icon icon-shopping-bag"></span>藥品</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">活性維生素<span class="text-muted"> </span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">活性維生素<span class="text-muted"> </span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">活性維生素<span class="text-muted"></span></div>
+                  </div>
+                  <div class="list-group col-lg-12 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between text-success">健保給付金額總計<span class="text-danger">39,956</span></div>
+                  </div>
+                </div>
+              </div>
+              <!--材料成本-->
+              <div class="col-lg-12 mb-4">
+                <div class="row">
+                  <div class="list-group col-lg-12 mb-3">
+                    <h6><span class="icon icon-leaf"></span>材料成本</h6>
+                  </div>
+                  <div class="list-group col-lg-4 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success"><span class="icon icon-shopping-bag"></span>追蹤處置費</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">
+                      <ul class="list-group w-100 mb-3">
+                        <li class="list-group-header justify-content-between">醫護人員費</li>
+                        <li class="list-group-item justify-content-between">酒精<span class="text-muted">1.5L</span></li>
+                        <li class="list-group-item justify-content-between">碘酒<span class="text-muted">1.5L</span></li>
+                      </ul>
+                      <ul class="list-group w-100 mb-3">
+                        <li class="list-group-header justify-content-between">醫護人員費</li>
+                        <li class="list-group-item justify-content-between">酒精<span class="text-muted">1.5L</span></li>
+                        <li class="list-group-item justify-content-between">碘酒<span class="text-muted">1.5L</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="list-group col-lg-4 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success">
+                        <!-- <span class="icon icon-drop"></span>--><span class="icon icon-shopping-bag"></span>腹膜透析液(incl. Cassette, 租金)</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between"><span>人工腎臟－REUSE</span></div>
+                  </div>
+                  <div class="list-group col-lg-4 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success"><span class="icon icon-shopping-bag"></span>藥品</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">活性維生素<span class="text-muted">1顆</span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">活性維生素<span class="text-muted">1顆 </span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">活性維生素<span class="text-muted">1顆</span></div>
+                  </div>
+                  <div class="list-group col-lg-12 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between text-success">健保給付金額總計<span class="text-danger">39,956</span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between text-success">毛利潤<span class="text-danger">39,956</span></div>
+                  </div>
+                </div>
+              </div>
+              <!--營運費用-->
+              <div class="col-lg-12 mb-5">
+                <div class="row">
+                  <div class="list-group col-lg-12 mb-3">
+                    <h6><span class="icon icon-credit"></span>營運費用</h6>
+                  </div>
+                  <!--醫師-->
+                  <div class="list-group col-lg-4 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success">醫師</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">
+                      <ul class="list-group w-100 mb-3 mt-3">
+                        <li class="list-group-header justify-content-between">Time allocation to PD</li>
+                        <li class="list-group-item justify-content-between">照顧PD病人數/每護理人員
+                          <input class="col-md-4 form-control" type="text" placeholder="15">
+                        </li>
+                        <li class="list-group-item justify-content-between">費用支出<span class="text-muted statcard-desc">(每病人/每月)</span>
+                          <input class="col-md-4 form-control" type="text" placeholder="15">
+                        </li>
+                      </ul>
+                      <ul class="list-group w-100 mb-3 mt-3">
+                        <li class="list-group-header justify-content-between">醫師固定薪資allocated to PD(月)</li>
+                        <li class="list-group-item justify-content-between">照顧PD病人數/每護理人員
+                          <input class="col-md-4 form-control" type="text" placeholder="15">
+                        </li>
+                        <li class="list-group-item justify-content-between">費用支出<span class="text-muted statcard-desc">(每病人/每月)</span>
+                          <input class="col-md-4 form-control" type="text" placeholder="15">
+                        </li>
+                      </ul>
+                      <ul class="list-group w-100 mb-3 mt-3">
+                        <li class="list-group-header justify-content-between">醫師績效獎金(PPF)/每月每病人</li>
+                        <li class="list-group-item justify-content-between">照顧PD病人數/每護理人員
+                          <input class="col-md-4 form-control" type="text" placeholder="15">
+                        </li>
+                        <li class="list-group-item justify-content-between">費用支出<span class="text-muted statcard-desc">(每病人/每月)</span>
+                          <input class="col-md-4 form-control" type="text" placeholder="15">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!--護理人員-->
+                  <div class="list-group col-lg-4 mb-5">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success">護理人員</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">照顧PD病人數/每護理人員
+                      <input class="col-md-4 form-control" type="text" placeholder="15">
+                    </div>
+                    <div class="list-group-item list-group-item-action justify-content-between">年薪/人<span class="text-muted statcard-desc">(含相關福利)</span>
+                      <input class="col-md-4 form-control" type="text" placeholder="80000">
+                    </div>
+                    <div class="list-group-item list-group-item-action justify-content-between">費用支出<span class="text-muted statcard-desc">(每病人/每月)</span>
+                      <input class="col-md-4 form-control" type="text" placeholder="1905">
+                    </div>
+                  </div>
+                  <!--行政管理費用-->
+                  <div class="list-group col-lg-4 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between"><small class="delta-indicator text-success">行政管理費用</small></div>
+                    <div class="list-group-item list-group-item-action justify-content-between">照顧PD病人數/每護理人員
+                      <input class="col-md-4 form-control" type="text" placeholder="15"><span class="text-muted statcard-desc">(佔營收比例)</span>
+                    </div>
+                    <div class="list-group-item list-group-item-action justify-content-between">費用支出<span class="text-muted statcard-desc">(每病人/每月)</span>
+                      <input class="col-md-4 form-control" type="text" placeholder="1905">
+                    </div>
+                  </div>
+                  <div class="list-group col-lg-12 mb-3">
+                    <div class="list-group-item list-group-item-action justify-content-between text-success">營運成本總計<span class="text-danger">39,956</span></div>
+                    <div class="list-group-item list-group-item-action justify-content-between text-success">稅前利潤<span class="text-danger">39,956</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 按鈕--><a href="#docsModal" data-toggle="modal">
+              <button class="btn btn-primary col-md-12" id="step01_finish" type="button"><span class="icon icon-calculator"></span> 下一步，PD試算</button></a>
+          </div>
+          <!-- seciton01_3-->
+          <div class="tab-pane" id="seciton01_3" role="tabpanel" aria-expanded="false">33</div>
+        </div>
+        <footer>
+          <div class="dashhead-subtitle text-center">® 版權所有 百特醫療產品股份有限公司 - Baxter Taiwan Version 1.0</div>
+        </footer>
+      </div>
+    </div>
+    <div class="modal fade" id="docsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">下一步「<span class="icon icon-calculator"> PD試算」</span></h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <p>點選「<span class="icon icon-calculator">PD試算」並輸入資料<br><span class="text-success">系統將繼續試算利潤比例</span></span></p>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-link modal-action text-danger step01_finish" type="button" data-dismiss="modal"><span class="icon icon-trash"></span> 重新填寫</button>
+            <button class="btn-link modal-action text-success step01_finish" type="button" data-dismiss="modal"><span class="icon icon-check"></span> 繼續試算</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/tether.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/tablesorter.min.js"></script>
+    <script src="assets/js/toolkit.js"></script>
+    <script src="assets/js/application.js">         </script>
+    <script>
+      $('#step01_finish').click(function() {
+          $("html, body").animate({
+              scrollTop: 0
+          }, 600);
+      });
+      $('.step01_finish').click(function() {
+          $("html, body").animate({
+              scrollTop: 0
+          }, 600);
+      })
+    </script>
+  </body>
+</html>

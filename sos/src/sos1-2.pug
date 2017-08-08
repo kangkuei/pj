@@ -1,0 +1,261 @@
+﻿//- page laytout name
+extends _layout.pug
+
+block pageInfo
+    title Baxter SOS系統 | PD利潤試算
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='author', content='')
+block page_main
+    .container
+        .col-md-12
+            .dashhead.mb-1
+                .dashhead-titles
+                    h6.dashhead-subtitle PD 利潤試算
+                    h2.dashhead-title  HD/PD Profit spreadsheet
+            // 標籤功能
+            //
+                <div class="hr-divider mb-4">
+                <ul class="nav nav-pills hr-divider-content hr-divider-nav">
+                <li class="nav-item">
+                <a class="nav-link active" href="#"><span class="icon icon-calculator"></span> HD試算</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#"><span class="icon icon-calculator"></span> PD試算</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#"><span class="icon icon-time-slot"></span> HD/PD 試算比較</a>
+                </li>
+                </ul>
+                </div>
+            // 標籤
+            ul.nav.nav-bordered.mt-4.mt-md-2.mb-0.clearfix(role='tablist')
+                li.nav-item(role='presentation')
+                    a.nav-link(href='#seciton01_1', role='tab', data-toggle='tab', aria-controls='hd', aria-expanded='true')
+                        span.icon.icon-calculator
+                        |  HD試算
+                li.nav-item(role='presentation')
+                    a.nav-link.active(href='#seciton01_2', role='tab', data-toggle='tab', aria-controls='pd', aria-expanded='false')
+                        span.icon.icon-calculator
+                        |  PD試算
+                li.nav-item(role='presentation')
+                    a.nav-link(href='#seciton01_3', role='tab', data-toggle='tab', aria-controls='hdvspd', aria-expanded='false')
+                        span.icon.icon-time-slot
+                        |  HD/PD 試算比較
+            hr.mt-0.mb-4
+            // 麵包屑
+            //
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><span class="icon icon-calculator"></span> HD試算</a></li>
+                <li class="breadcrumb-item active">開始試算</li>
+                </ol>
+            div.tab-content
+                // seciton01_1
+                div#seciton01_1.tab-pane.active(role='tabpanel', aria-expanded='true')
+                // seciton01_2
+                #seciton01_2.tab-pane.active(role='tabpanel', aria-expanded='false')
+                    div.row
+                        //健保給付
+                        div.col-lg-12.mb-4
+                            div.row
+                                div.list-group.col-lg-12.mb-3
+                                    h6
+                                        span.icon.icon-leaf
+                                        | 健保給付
+                                div.list-group.col-lg-4.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success
+                                            span.icon.icon-shopping-bag
+                                            | 追蹤處置費
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 醫護人員費
+                                        span.text-muted -
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 特殊材料費
+                                        span.text-muted -
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        span.text-left 醫材耗品費
+                                        span.text-muted 00000000000000000000000000000
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 檢查費
+                                        span.text-muted 999
+                                div.list-group.col-lg-4.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success
+                                            // <span class="icon icon-drop"></span>
+                                            span.icon.icon-shopping-bag
+                                            | 腹膜透析液(incl. Cassette, 租金)
+                                        small.delta-indicator.text-danger 使用比例
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        span 人工腎臟－REUSE
+                                        input.col-md-4.form-control.text-left(type='text', placeholder='0')
+                                        span 1.5L
+                                div.list-group.col-lg-4.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success
+                                            span.icon.icon-shopping-bag
+                                            | 藥品
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 活性維生素
+                                        span.text-muted 
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 活性維生素
+                                        span.text-muted 
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 活性維生素
+                                        span.text-muted
+                                div.list-group.col-lg-12.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between.text-success
+                                        | 健保給付金額總計
+                                        span.text-danger 39,956
+                        //材料成本
+                        div.col-lg-12.mb-4
+                            div.row
+                                div.list-group.col-lg-12.mb-3
+                                    h6
+                                        span.icon.icon-leaf
+                                        | 材料成本
+                                div.list-group.col-lg-4.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success
+                                            span.icon.icon-shopping-bag
+                                            | 追蹤處置費
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        ul.list-group.w-100.mb-3
+                                            li.list-group-header.justify-content-between 醫護人員費
+                                            li.list-group-item.justify-content-between 酒精
+                                                span.text-muted 1.5L
+                                            li.list-group-item.justify-content-between 碘酒
+                                                span.text-muted 1.5L
+                                        ul.list-group.w-100.mb-3
+                                            li.list-group-header.justify-content-between 醫護人員費
+                                            li.list-group-item.justify-content-between 酒精
+                                                span.text-muted 1.5L
+                                            li.list-group-item.justify-content-between 碘酒
+                                                span.text-muted 1.5L
+                                div.list-group.col-lg-4.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success
+                                            // <span class="icon icon-drop"></span>
+                                            span.icon.icon-shopping-bag
+                                            | 腹膜透析液(incl. Cassette, 租金)
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        span 人工腎臟－REUSE
+                                div.list-group.col-lg-4.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success
+                                            span.icon.icon-shopping-bag
+                                            | 藥品
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 活性維生素
+                                        span.text-muted 1顆
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 活性維生素
+                                        span.text-muted 1顆 
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 活性維生素
+                                        span.text-muted 1顆
+                                div.list-group.col-lg-12.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between.text-success
+                                        | 健保給付金額總計
+                                        span.text-danger 39,956
+                                    div.list-group-item.list-group-item-action.justify-content-between.text-success
+                                        | 毛利潤
+                                        span.text-danger 39,956
+                        //營運費用
+                        div.col-lg-12.mb-5
+                            div.row
+                                div.list-group.col-lg-12.mb-3
+                                    h6
+                                        span.icon.icon-credit
+                                        | 營運費用
+                                //醫師
+                                div.list-group.col-lg-4.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success 醫師
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        ul.list-group.w-100.mb-3.mt-3
+                                            li.list-group-header.justify-content-between Time allocation to PD
+                                            li.list-group-item.justify-content-between
+                                                | 照顧PD病人數/每護理人員
+                                                input.col-md-4.form-control(type='text', placeholder='15')
+                                            li.list-group-item.justify-content-between
+                                                | 費用支出
+                                                span.text-muted.statcard-desc (每病人/每月)
+                                                input.col-md-4.form-control(type='text', placeholder='15')
+                                        ul.list-group.w-100.mb-3.mt-3
+                                            li.list-group-header.justify-content-between 醫師固定薪資allocated to PD(月)
+                                            li.list-group-item.justify-content-between
+                                                | 照顧PD病人數/每護理人員
+                                                input.col-md-4.form-control(type='text', placeholder='15')
+                                            li.list-group-item.justify-content-between
+                                                | 費用支出
+                                                span.text-muted.statcard-desc (每病人/每月)
+                                                input.col-md-4.form-control(type='text', placeholder='15')
+                                        ul.list-group.w-100.mb-3.mt-3
+                                            li.list-group-header.justify-content-between 醫師績效獎金(PPF)/每月每病人
+                                            li.list-group-item.justify-content-between
+                                                | 照顧PD病人數/每護理人員
+                                                input.col-md-4.form-control(type='text', placeholder='15')
+                                            li.list-group-item.justify-content-between
+                                                | 費用支出
+                                                span.text-muted.statcard-desc (每病人/每月)
+                                                input.col-md-4.form-control(type='text', placeholder='15')
+                                //護理人員
+                                div.list-group.col-lg-4.mb-5
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success 護理人員
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 照顧PD病人數/每護理人員
+                                        input.col-md-4.form-control(type='text', placeholder='15')
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 年薪/人
+                                        span.text-muted.statcard-desc (含相關福利)
+                                        input.col-md-4.form-control(type='text', placeholder='80000')
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 費用支出
+                                        span.text-muted.statcard-desc (每病人/每月)
+                                        input.col-md-4.form-control(type='text', placeholder='1905')
+                                //行政管理費用
+                                div.list-group.col-lg-4.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        small.delta-indicator.text-success 行政管理費用
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 照顧PD病人數/每護理人員
+                                        input.col-md-4.form-control(type='text', placeholder='15')
+                                        span.text-muted.statcard-desc (佔營收比例)
+                                    div.list-group-item.list-group-item-action.justify-content-between
+                                        | 費用支出
+                                        span.text-muted.statcard-desc (每病人/每月)
+                                        input.col-md-4.form-control(type='text', placeholder='1905')
+                                div.list-group.col-lg-12.mb-3
+                                    div.list-group-item.list-group-item-action.justify-content-between.text-success
+                                        | 營運成本總計
+                                        span.text-danger 39,956
+                                    div.list-group-item.list-group-item-action.justify-content-between.text-success
+                                        | 稅前利潤
+                                        span.text-danger 39,956
+                    // 按鈕
+                    a(href='#docsModal', data-toggle='modal')
+                        button#step01_finish.btn.btn-primary.col-md-12(type='button')
+                            span.icon.icon-calculator
+                            |  下一步，PD試算
+                // seciton01_3
+                #seciton01_3.tab-pane(role='tabpanel', aria-expanded='false')
+                    | 33
+            footer
+                .dashhead-subtitle.text-center ® 版權所有 百特醫療產品股份有限公司 - Baxter Taiwan Version 1.0
+block bottomScripts
+    script.
+        $('#step01_finish').click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+        });
+        $('.step01_finish').click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+        })
+

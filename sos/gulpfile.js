@@ -50,7 +50,7 @@ gulp.task('sass', function() {
             browsers: ["last 4 versions", "Firefox >= 27", "Blackberry >= 7", "IE 8", "IE 9"],
             cascade: false
         }))
-        .pipe(gulp.dest('dist/css/'))
+        .pipe(gulp.dest('dist/assets/css/'))
         .pipe(connect.reload());
 });
 
@@ -75,9 +75,16 @@ gulp.task('connectDist', function() {
 });
 
 //Copy file Start
+
+gulp.task('copyFonts', function() {
+    gulp.src(['src/fonts/**'])
+        .pipe(gulp.dest('dist/assets/fonts'))
+        .pipe(connect.reload());
+});
+
 gulp.task('copyJS', function() {
     gulp.src(['src/js/**'])
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('dist/assets/js'))
         .pipe(connect.reload());
 });
 
@@ -89,13 +96,13 @@ gulp.task('copyLib', function() {
 
 gulp.task('copyCSS', function() {
     gulp.src(['src/css/**'])
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist/assets/css'))
         .pipe(connect.reload());
 });
 
 gulp.task('copyImg', function() {
     gulp.src(['src/images/*','!src/images/sprite'])
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('dist/assets/img'))
         .pipe(connect.reload());
 });
 
@@ -104,7 +111,7 @@ gulp.task('copyAssets', function() {
         .pipe(gulp.dest('dist/assets'));
 });
 
-gulp.task('copyAll', ['copyLib','copyJS','copyCSS', 'copyImg', 'copyAssets'], function() {});
+gulp.task('copyAll', ['copyLib','copyJS','copyCSS', 'copyImg', 'copyAssets', 'copyFonts'], function() {});
 //Copy file End
 
 //Clean
@@ -124,6 +131,7 @@ gulp.task('open', function() {
 
 // Watch
 gulp.task('watch', function() {
+    gulp.watch(['src/*'], ['copyFonts']);
     gulp.watch(['src/*.jade'], ['pug']);
     gulp.watch(['src/*.pug'], ['pug']);
     gulp.watch('src/scss/**/**.scss', ['sass']);
@@ -139,7 +147,7 @@ gulp.task('build', ['pug', 'htmlbeautify', 'sass', 'copyAll'], function() {
 });
 
 //Group Dev
-gulp.task('dev', ['build', 'connectDist', 'sass', 'watch', 'open','pug'], function() {});
+gulp.task('dev', ['build', 'connectDist', 'sass', 'watch', 'open','pug', 'copyFonts'], function() {});
 
 //Default  Task
 gulp.task('default', ['dev'], function() {

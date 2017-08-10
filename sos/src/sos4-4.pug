@@ -8,89 +8,244 @@ block pageInfo
     meta(name='keywords', content='')
     meta(name='author', content='')
 block page_main
-    .container
-        .col-md-12
-            .dashhead.mb-1
-                .dashhead-titles
-                    h6.dashhead-subtitle sos4-4
-                    h2.dashhead-title  sos4-4
-            div.row
-                //健保給付
-                div.col-lg-12.mb-4
-                    div.row
-                        ul.list-group.col-lg-12
-                            li.list-group-header.text-success List group header
-                            li.list-group-item.justify-content-between
-                                span 1dssfdf
-                                span 200000000000
-                                span 3
-                            li.list-group-item.justify-content-between
-                                span 1
-                                span 2000
-                                span 
-                        ul.list-group.col-lg-12
-                            li.list-group-item.justify-content-between.text-success 
-                                span 
-                                span PD
-                                span HD
-                                span 
-                            li.list-group-item.justify-content-between
-                                span 1dssfdf
-                                span 200000000000
-                                span 3
-                                span XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                            li.list-group-item.justify-content-between
-                                span 1
-                                span 2000
-                                span
-                                span 
-                        //- div.list-group.col-lg-4.mb-3
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         small.delta-indicator.text-success
-                        //-             span.icon.icon-shopping-bag
-                        //-             | 追蹤處置費
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         | 醫護人員費
-                        //-         span.text-muted -
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         | 特殊材料費
-                        //-         span.text-muted -
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         span.text-left 醫材耗品費
-                        //-         span.text-muted 00000000000000000000000000000
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         | 檢查費
-                        //-         span.text-muted 999
-                        //- div.list-group.col-lg-4.mb-3
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         small.delta-indicator.text-success
-                        //-             // <span class="icon icon-drop"></span>
-                        //-             span.icon.icon-shopping-bag
-                        //-             | 腹膜透析液(incl. Cassette, 租金)
-                        //-         small.delta-indicator.text-danger 使用比例
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         span 人工腎臟－REUSE
-                        //-         input.col-md-4.form-control.text-left(type='text', placeholder='0')
-                        //-         span 1.5L
-                        //- div.list-group.col-lg-4.mb-3
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         small.delta-indicator.text-success
-                        //-             span.icon.icon-shopping-bag
-                        //-             | 藥品
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         | 活性維生素
-                        //-         span.text-muted 
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         | 活性維生素
-                        //-         span.text-muted 
-                        //-     div.list-group-item.list-group-item-action.justify-content-between
-                        //-         | 活性維生素
-                        //-         span.text-muted
-                        //- div.list-group.col-lg-12.mb-3
-                            div.list-group-item.list-group-item-action.justify-content-between.text-success
-                                | 健保給付金額總計
-                                span.text-danger 39,956                               
-            footer
-                .dashhead-subtitle.text-center ® 版權所有 百特醫療產品股份有限公司 - Baxter Taiwan Version 1.0
+    div.container
+        div.col-md-12.mb-3
+            ul.list-group
+                li.list-group-item.justify-content-between
+                    span.col-md-4 每年新ESRD病人預估量
+                    input.col-md-2.form-control(type='text', placeholder='96%')
+                    span.col-md-1.text-danger -9%
+                li.list-group-item.justify-content-between
+                    span.col-md-4 每年新進入本院透析病人數
+                    input.col-md-2.form-control(type='text', placeholder='85%')
+                    span.col-md-1.text-danger -13%
+                li.list-group-item.justify-content-between
+                    span.col-md-4 每年新ESRD病人預估量
+                    span.col-md-2 11%
+                    span.col-md-1
+        div.col-md-12.mb-3   
+            ul.list-group
+                li.list-group-header.justify-content-between 第一年留院率
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    input.col-md-2.form-control(type='text', placeholder='96%')
+                    span.col-md-1.text-danger -9%
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    input.col-md-2.form-control(type='text', placeholder='85%')
+                    span.col-md-1.text-danger -13%
+                li.list-group-item.justify-content-between
+                    span.col-md-4 
+                    span.col-md-2 11%
+                    span.col-md-1
+                li.list-group-header.justify-content-between 第二年留院率
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    input.col-md-2.form-control(type='text', placeholder='96%')
+                    span.col-md-1.text-danger -9%
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    input.col-md-2.form-control(type='text', placeholder='85%')
+                    span.col-md-1.text-danger -13%
+                li.list-group-item.justify-content-between
+                    span.col-md-4 
+                    span.col-md-2 11%
+                    span.col-md-1
+                li.list-group-header.justify-content-between 第三年留院率
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    input.col-md-2.form-control(type='text', placeholder='96%')
+                    span.col-md-1.text-danger -9%
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    input.col-md-2.form-control(type='text', placeholder='85%')
+                    span.col-md-1.text-danger -13%
+                li.list-group-item.justify-content-between
+                    span.col-md-4 
+                    span.col-md-2 11%
+                    span.col-md-1
+                li.list-group-header.justify-content-between 第四年留院率
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    input.col-md-2.form-control(type='text', placeholder='96%')
+                    span.col-md-1.text-danger -9%
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    input.col-md-2.form-control(type='text', placeholder='85%')
+                    span.col-md-1.text-danger -13%
+                li.list-group-item.justify-content-between
+                    span.col-md-4 
+                    span.col-md-2 11%
+                    span.col-md-1
+                li.list-group-header.justify-content-between 第五年留院率
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    input.col-md-2.form-control(type='text', placeholder='96%')
+                    span.col-md-1.text-danger -9%
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    input.col-md-2.form-control(type='text', placeholder='85%')
+                    span.col-md-1.text-danger -13%
+                li.list-group-item.justify-content-between
+                    span.col-md-4 
+                    span.col-md-2 11%
+                    span.col-md-1
+        div.col-md-12.mb-3   
+            ul.list-group
+                li.list-group-header.justify-content-between 第一年病人留院數
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 29
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 102
+                    span.col-md-1.text-danger
+                li.list-group-header.justify-content-between 第二年病人留院數
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 29
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 102
+                    span.col-md-1.text-danger
+                li.list-group-header.justify-content-between 第三年病人留院數
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 29
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 102
+                    span.col-md-1.text-danger
+                li.list-group-header.justify-content-between 第四年病人留院數
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 29
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 102
+                    span.col-md-1.text-danger
+                li.list-group-header.justify-content-between 第五年病人留院數
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 29
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 102
+                    span.col-md-1.text-danger
+        div.col-md-12.mb-3   
+            ul.list-group
+                li.list-group-header.justify-content-between 第一年透析利潤
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 $2,546,283.07
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 $6,219,478.40
+                    span.col-md-1.text-danger
+                li.list-group-header.justify-content-between 第二年透析利潤
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 $2,546,283.07
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 $6,219,478.40
+                    span.col-md-1.text-danger
+                li.list-group-header.justify-content-between 第三年透析利潤
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 $2,546,283.07
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 $6,219,478.40
+                    span.col-md-1.text-danger
+                li.list-group-header.justify-content-between 第四年透析利潤
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 $2,546,283.07
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 $6,219,478.40
+                    span.col-md-1.text-danger
+                li.list-group-header.justify-content-between 第五年透析利潤
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2 $2,546,283.07
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2 $6,219,478.40
+                    span.col-md-1.text-danger
+        div.col-md-12.mb-3 
+            ul.list-group
+                li.list-group-header.justify-content-between 五年總利潤
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2.text-danger $2,546,283.07
+                    span.col-md-1.text-danger 
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2.text-danger $6,219,478.40
+                    span.col-md-1.text-danger
+        div.col-md-12.mb-3
+            ul.list-group
+                li.list-group-header.justify-content-between 五年總利潤/病人
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success PD
+                    span.col-md-2.text-danger $2,546,283.07
+                    span.col-md-1.text-danger
+                li.list-group-item.justify-content-between 
+                    span.col-md-4.text-success HD
+                    span.col-md-2.text-danger $6,219,478.40
+                    span.col-md-1.text-danger
+            //- ul.list-group
+            //-     li.list-group-item.justify-content-between
+            //-         div.col-md-12
+            //-             div.row.mb-2
+            //-                 div.col-md-3
+            //-                     p 每年新ESRD病人預估量
+            //-                 div.col-md-3
+            //-                     input.col-md-12.form-control(type='text', placeholder='200')
+            //-             div.row.mb-2
+            //-                 div.col-md-3
+            //-                     p 每年新進入本院透析病人數
+            //-                 div.col-md-3
+            //-                     input.col-md-12.form-control(type='text', placeholder='150')
+            //-             div.row
+            //-                 div.col-md-3
+            //-                     p 每年新ESRD病人預估量
+            //-                 div.col-md-3.mb-2
+            //-                     input.col-md-12.form-control(type='text', placeholder='30')
+            //-                 div.col-md-3
+            //-                     p 120
+        //- div.col-md-12
+        //-     div.row.mb-3
+        //-         div.col-md-3
+        //-         div.col-md-3 
+        //-             P.text-success PD
+        //-         div.col-md-3 
+        //-             P.text-success HD
+        //-     div.row.mb-3
+        //-         div.col-md-3.mb-2
+        //-             p 第一年留院率
+        //-         div.col-md-3.mb-2 
+        //-             input.col-md-12.form-control(type='text', placeholder='96%')
+        //-         div.col-md-3.mb-2 
+        //-             input.col-md-12.form-control(type='text', placeholder='85%')
+        //-         div.col-md-3.mb-2 
+        //-             p 11%
+        //-         div.col-md-3.mb-2
+        //-         div.col-md-3.mb-2
+        //-             p.text-danger -9%
+        //-         div.col-md-3.mb-2
+        //-             p.text-danger -13%
 block bottomScripts
 

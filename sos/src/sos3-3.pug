@@ -15,8 +15,8 @@ block page_main
                     h6.dashhead-subtitle 
                     h2.dashhead-title  HD利潤分析(每月每病人)
         div.table-responsive.col-12
-            table.table.table-bordered
-                thead
+            table.table.table-bordered.table-hover
+                thead.table-active
                     tr
                         th
                         th 單價
@@ -64,9 +64,39 @@ block page_main
                     tr
                         td(colspan="3") 新增病人每月利潤
                         td 5,081
+                thead
+                    tr.table-active
+                        th(colspan="2")
+                        th 現制
+                        th 
+                tbody
+                    tr
+                        th(scope='row' colspan="2") 點值
+                        td 0.8167
+                        td
+                    tr
+                        th(scope='row' colspan="2") 點數/每病次
+                        td 3,912
+                        td
+                    tr
+                        th(scope='row' colspan="2") 健保給付點數
+                        td 48,900
+                        td
+                    tr
+                        th(scope='row' colspan="2") 健保給付金額
+                        td 39,937
+                        td 100%
+                    tr
+                        th(scope='row' colspan="2") 成本
+                        td 34,855
+                        td 87%
+                    tr.text-success
+                        th(scope='row' colspan="2") 利潤
+                        td 5,081
+                        td 13%
         div.table-responsive.col-12
             table.table.table-bordered
-                thead
+                thead.table-active
                     tr
                         th
                         th 現制

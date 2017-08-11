@@ -1,0 +1,11 @@
+﻿@media (max-width: 991px) {
+  .mw-xsmd-150 {
+    min-width: 150px;
+  }
+  .mw-xsmd-100 {
+    min-width: 100px;
+  }
+  .mw-xsmd-50 {
+    min-width: 50px;
+  }
+}

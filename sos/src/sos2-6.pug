@@ -14,7 +14,7 @@ block page_main
                 div.dashhead.mb-1
                     div.dashhead-titles
                         h6.dashhead-subtitle 
-                        h2.dashhead-title  HD 投資損益
+                        h2.dashhead-title  PD 投資損益
         div.row
             div.table-responsive.col-12
                 table.table.table-bordered.table-hover
@@ -29,8 +29,8 @@ block page_main
                             th 第五年
                     tbody
                         tr
-                            td 目前每月病人次
-                            td 937
+                            td 目前PD病人數
+                            td 35
                             td
                             td
                             td
@@ -38,7 +38,7 @@ block page_main
                             td
                         tr
                             td 淨成長病人數
-                            td 女
+                            td <span class="text-muted"></span>
                             td 15
                             td 15
                             td 15
@@ -53,45 +53,53 @@ block page_main
                             td 60
                             td 75
                         tr
-                            td 健保給付點數/病人次
-                            td <span class="text-muted"></span>
-                            td 3,912
-                            td 3,912
-                            td 3,912
-                            td 3,912
-                            td 3,912
-                        tr
                             td 預估點值
                             td <span class="text-muted"></span>
-                            td 0.8167
+                            td 1.1000
                             td 0.8167
                             td 0.8167
                             td 0.8167
                             td 0.8167
                         tr
-                            td 病人次/年
-                            td 150
-                            td 1,125
-                            td 3,375
-                            td 5,625
-                            td 7,875
-                            td 10,125
+                            td 健保給付金額
+                            td 每月
+                            td 
+                            td 
+                            td 
+                            td 
+                            td 
                         tr
-                            td 健保給付點數/年
-                            td <span class="text-muted"></span>
-                            td 4,401,000
-                            td 13,203,000
-                            td 22,005,000
-                            td 30,807,000
-                            td 39,609,000
+                            td 追蹤處置費
+                            td 8,675
+                            td 858,825
+                            td 1,912,916
+                            td 3,188,193
+                            td 4,463,470
+                            td 5,738,747
                         tr
-                            td 健保給付金額/年
-                            td <span class="text-muted"></span>
-                            td 3,594,297
-                            td 10,782,890
-                            td 17,971,484
-                            td 25,160,077
-                            td 32,348,670
+                            td 腹膜透析藥水
+                            td 25,668
+                            td 2,310,160
+                            td 6,930,481
+                            td 11,550,802
+                            td 16,171,123
+                            td 20,791,444
+                        tr
+                            td 藥品
+                            td 5,613
+                            td 505,170
+                            td 1,515,510
+                            td 2,525,850
+                            td 3,536,190
+                            td 4,546,530
+                        tr
+                            td.text-primary 藥品
+                            td 
+                            td.text-primary 3,674,155
+                            td.text-primary 10,358,907
+                            td.text-primary 17,264,845
+                            td.text-primary 24,170,783
+                            td.text-primary 31,076,721
             div.col-md-12
                 p.text-success 材料成本
             div.table-responsive.col-12
@@ -107,13 +115,42 @@ block page_main
                             th 第五年
                     tbody
                         tr
-                            td 衛材類
-                            td <span class="text-muted">533.6</span>
-                            td 600,345
-                            td 1,801,035
-                            td 3,001,725
-                            td 4,202,415
-                            td 5,403,105
+                            td 追蹤處置費
+                            td 924
+                            td 83,130
+                            td 249,390
+                            td 415,650
+                            td 581,910
+                            td 748,170
+                        tr
+                            td 腹膜透析藥水
+                            td 22,166
+                            td 1,994,970
+                            td 5,984,911
+                            td 9,974,852
+                            td 13,964,792
+                            td 17,954,733
+                        tr
+                            td 藥品
+                            td 3,224
+                            td 290,160
+                            td 870,480
+                            td 1,450,800
+                            td 2,031,120
+                            td 2,611,440
+                        tr
+                            td.text-success 材料成本總計
+                            td
+                            td.text-success 2,368,260
+                                p.text-right 64%
+                            td.text-success 7,104,781
+                                p.text-right 69%
+                            td.text-success 11,841,302
+                                p.text-right 69%
+                            td.text-success 16,577,822
+                                p.text-right 69%
+                            td.text-success 21,314,343
+                                p.text-right 69%
             div.col-md-12
                 p.text-success 費用
             div.table-responsive.col-12
@@ -123,138 +160,108 @@ block page_main
                     tbody
                         tr
                             td.w-25 硬體設備折舊攤提
-                            td <span class="text-muted">1,140,000</span>
-                            td 1,140,000
-                            td 1,140,000
-                            td 1,140,000
-                            td 1,140,000
-                            td 1,140,000
+                            td 500,000
+                            td 100,000
+                            td 100,000
+                            td 100,000
+                            td 100,000
+                            td 100,000
                         tr
-                            td.text-right(colspan="7") 5,700,000
+                            td.text-right(colspan="7") 500,000
                         tr
                             td 人事薪資
                             td <span class="text-muted"></span>
-                            td 5,080,500
-                            td 7,105,500
-                            td 9,130,500
-                            td 11,155,500
-                            td 13,180,500
+                            td 149,189
+                            td 1,580,646
+                            td 2,207,102
+                            td 3,628,954
+                            td 4,246,562
                         tr
-                            td 固定薪資
+                            td 固定薪資(醫師)
+                            td 800,000
+                            td -
+                            td 800,000
+                            td 800,000
+                            td 1,600,000
+                            td 1,600,000
+                        tr
+                            td 固定薪資(護士)
                             td <span class="text-muted"></span>
-                            td 4,799,250
-                            td 6,261,750
-                            td 7,724,250
-                            td 9,186,750
-                            td 10,649,250
+                            td 120,811
+                            td 29,354
+                            td 57,102
+                            td 138,954
+                            td 216,562
+                        tr
+                            td 現有PD護士人數
+                            td <span class="text-muted">-</span>
+                            td 
+                            td 
+                            td 
+                            td 
+                            td 
+                        tr
+                            td PD護理人員數(excl.現有數)
+                            td 35
+                            td -
+                            td 1.0
+                            td 1.0
+                            td 2.0
+                            td 2.0
                         tr
                             td 變動薪資(獎金)
                             td <span class="text-muted"></span>
-                            td 281,250
-                            td 843,750
-                            td 1,406,250
-                            td 1,968,750
-                            td 2,531,250
+                            td 270,000
+                            td 810,000
+                            td 1,350,000
+                            td 1,890,000
+                            td 2,430,000
                         tr
                             td 醫師
-                            td <span class="text-muted">250</span>
-                            td 281,250
-                            td 843,750
-                            td 1,406,250
-                            td 1,968,750
-                            td 2,531,250
-                        tr
-                            td 醫護人員/其他
-                            td <span class="text-muted"></span>
-                            td -
-                            td -
-                            td -
-                            td -
-                            td -
-                        tr
-                            td 房屋租金
-                            td <span class="text-muted">1,848,000</span>
-                            td 1,848,000
-                            td 1,848,000
-                            td 1,848,000
-                            td 1,848,000
-                            td 1,848,000
-                        tr
-                            td 營運費用(水,電)
-                            td <span class="text-muted">480,000</span>
-                            td 480,000
-                            td 480,000
-                            td 480,000
-                            td 480,000
-                            td 480,000
+                            td <span class="text-muted">3000</span>
+                            td 270,000
+                            td 810,000
+                            td 1,350,000
+                            td 1,890,000
+                            td 2,430,000
                         tr
                             td 行政管理費用
-                            td <span class="text-muted">50</span>
-                            td 56,250
-                            td 168,750
-                            td 281,250
-                            td 393,750
-                            td 506,250
-                        tr
-                            td 利息支出
-                            td <span class="text-muted"></span>
-                            td -
-                            td -
-                            td -
-                            td -
-                            td -
+                            td <span class="text-muted">5.0%</span>
+                            td 183,708
+                            td 517,945
+                            td 863,242
+                            td 1,208,539
+                            td 1,553,836
                         tr
                             td
                                 p.text-success 費用總計
                             td <span class="text-muted"></span>
-                            td
-                                p.text-success.text-right 8,604,750
-                                    br
-                                    | 239%
-                            td
-                                p.text-success.text-right 10,742,250
-                                    br
-                                    | 100%
-                            td
-                                p.text-success.text-right 12,879,750
-                                    br
-                                    | 72%
-                            td
-                                p.text-success.text-right 15,017,250
-                                    br
-                                    | 60%
-                            td
-                                p.text-success.text-right 17,154,750
-                                    br
-                                    | 53%
+                            td.text-success 432,896
+                                p.text-right 12%
+                            td.text-success 2,198,592
+                                p.text-right 21%
+                            td.text-success 3,170,344
+                                p.text-right 18%
+                            td.text-success 4,937,494
+                                p.text-right 20%
+                            td.text-success 5,900,398
+                                p.text-right 19%
                         tr
                             td
                                 p.text-info 利潤
                             td <span class="text-muted"></span>
-                            td
-                                p.text-info.text-right 
-                                    span.text-danger (5,831,298)
-                                    br
-                                    | -162.2%
-                            td
-                                p.text-info.text-right 
-                                    span.text-danger (2,421,895)
-                                    br
-                                    | -22.5%
-                            td
-                                p.text-info.text-right 987,509
-                                    br
-                                    | 5.5%
-                            td
-                                p.text-info.text-right 4,396,912
-                                    br
-                                    | 17.5%
-                            td
-                                p.text-info.text-right 7,806,315
-                                    br
-                                    | 24.1%
+                            td.text-info 872,999
+                                p.text-right 24%
+                            td.text-info 1,055,534
+                                p.text-right 10%
+                            td.text-info 2,253,199
+                                p.text-right 13%
+                            td.text-info 2,655,467
+                                p.text-right 11%
+                            td.text-info 3,861,979
+                                p.text-right 12%
                         tr
-                            td.text-right(colspan="7") 4,937,543
+                            td.text-right(colspan="7") 10,699,179
                         tr
                             td
                                 p.text-info 累積利潤

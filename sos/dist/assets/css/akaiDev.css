@@ -2,7 +2,11 @@
     padding-left: 85px;
 }
 div.row{
+<<<<<<< HEAD
     /*margin-left: -7px;*/
+=======
+    /* margin-left: -7px; */
+>>>>>>> 9c8d74b953546263cecbb02782372ffccb28cc0f
 }
 @media (max-width: 640px) {
     .container {

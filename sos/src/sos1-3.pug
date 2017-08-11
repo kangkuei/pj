@@ -382,16 +382,16 @@ block page_main
                             span.icon.icon-calculator
                             |  下一步，PD試算
                 // seciton01_2
-                #seciton01_2.tab-pane(role='tabpanel', aria-expanded='false')
+                #seciton01_2.tab-pane.active(role='tabpanel', aria-expanded='false')
                     div.row
                         //健保給付
                         div.col-lg-12.mb-4
                             div.row
-                                div.list-group.col-lg-12.mb-3
+                                div.col-lg-12.mb-3
                                     h6
                                         span.icon.icon-leaf
                                         | 健保給付
-                                div.list-group.col-lg-4.mb-3
+                                div.col-lg-4.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success
                                             span.icon.icon-shopping-bag
@@ -408,7 +408,7 @@ block page_main
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         | 檢查費
                                         span.text-muted 999
-                                div.list-group.col-lg-4.mb-3
+                                div.col-lg-4.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success
                                             // <span class="icon icon-drop"></span>
@@ -419,7 +419,7 @@ block page_main
                                         span 人工腎臟－REUSE
                                         input.col-md-4.form-control.text-left(type='text', placeholder='0')
                                         span 1.5L
-                                div.list-group.col-lg-4.mb-3
+                                div.col-lg-4.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success
                                             span.icon.icon-shopping-bag
@@ -433,18 +433,18 @@ block page_main
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         | 活性維生素
                                         span.text-muted
-                                div.list-group.col-lg-12.mb-3
+                                div.col-lg-12.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between.text-success
                                         | 健保給付金額總計
                                         span.text-danger 39,956
                         //材料成本
                         div.col-lg-12.mb-4
                             div.row
-                                div.list-group.col-lg-12.mb-3
+                                div.col-lg-12.mb-3
                                     h6
                                         span.icon.icon-leaf
                                         | 材料成本
-                                div.list-group.col-lg-4.mb-3
+                                div.col-lg-4.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success
                                             span.icon.icon-shopping-bag
@@ -462,7 +462,7 @@ block page_main
                                                 span.text-muted 1.5L
                                             li.list-group-item.justify-content-between 碘酒
                                                 span.text-muted 1.5L
-                                div.list-group.col-lg-4.mb-3
+                                div.col-lg-4.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success
                                             // <span class="icon icon-drop"></span>
@@ -470,7 +470,7 @@ block page_main
                                             | 腹膜透析液(incl. Cassette, 租金)
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         span 人工腎臟－REUSE
-                                div.list-group.col-lg-4.mb-3
+                                div.col-lg-4.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success
                                             span.icon.icon-shopping-bag
@@ -484,7 +484,7 @@ block page_main
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         | 活性維生素
                                         span.text-muted 1顆
-                                div.list-group.col-lg-12.mb-3
+                                div.col-lg-12.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between.text-success
                                         | 健保給付金額總計
                                         span.text-danger 39,956
@@ -494,12 +494,12 @@ block page_main
                         //營運費用
                         div.col-lg-12.mb-5
                             div.row
-                                div.list-group.col-lg-12.mb-3
+                                div.col-lg-12.mb-3
                                     h6
                                         span.icon.icon-credit
                                         | 營運費用
                                 //醫師
-                                div.list-group.col-lg-4.mb-3
+                                div.col-lg-4.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success 醫師
                                     div.list-group-item.list-group-item-action.justify-content-between
@@ -531,7 +531,7 @@ block page_main
                                                 span.text-muted.statcard-desc (每病人/每月)
                                                 input.col-md-4.form-control(type='text', placeholder='15')
                                 //護理人員
-                                div.list-group.col-lg-4.mb-5
+                                div.col-lg-4.mb-5
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success 護理人員
                                     div.list-group-item.list-group-item-action.justify-content-between
@@ -546,7 +546,7 @@ block page_main
                                         span.text-muted.statcard-desc (每病人/每月)
                                         input.col-md-4.form-control(type='text', placeholder='1905')
                                 //行政管理費用
-                                div.list-group.col-lg-4.mb-3
+                                div.col-lg-4.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between
                                         small.delta-indicator.text-success 行政管理費用
                                     div.list-group-item.list-group-item-action.justify-content-between
@@ -557,7 +557,7 @@ block page_main
                                         | 費用支出
                                         span.text-muted.statcard-desc (每病人/每月)
                                         input.col-md-4.form-control(type='text', placeholder='1905')
-                                div.list-group.col-lg-12.mb-3
+                                div.col-lg-12.mb-3
                                     div.list-group-item.list-group-item-action.justify-content-between.text-success
                                         | 營運成本總計
                                         span.text-danger 39,956

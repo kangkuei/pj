@@ -17,320 +17,457 @@ block page_main
             div.list-group.col-lg-12.mb-3
                 h6
                     span.icon.icon-calculator
-                    | 投資明細
+                    |  投資明細
             div.table-responsive.col-12
-                table.table
-                    thead
+                table.table.table.table-bordered.table-hover
+                    thead.table-active
                         tr
                             th(colspan="7")
                                 span.text-success 新透析病人淨成長預估
                     tbody
                         tr
-                            td &nbsp;
+                            td.w-25
                             td &nbsp;
                             td 第一年
                             td 第二年
                             td 第三年
                             td 第四年
                             td 第五年
-            .tab-content
-                .row
-                    .col-lg-12.mb-4
-                        div.list-group.col-lg-12.mb-3
-                            h6
-                                span.icon.icon-calculator
-                                | 投資明細
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.text-success 新透析病人淨成長預估
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            div.col-lg-4
-                            div.col-lg-8
-                                div.row
-                                    div.col-md-2
-                                    div.col-md-2 第一年
-                                    div.col-md-2 第二年
-                                    div.col-md-2 第三年
-                                    div.col-md-2 第四年
-                                    div.col-md-2 第五年
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            div.col-lg-4
-                                span 目前人數約
-                            div.col-lg-8
-                                div.row
-                                    div.col-md-2
-                                        span 75
-                                    div.col-md-2
-                                        span 90
-                                    div.col-md-2
-                                        span 105
-                                    div.col-md-2
-                                        span 120
-                                    div.col-md-2
-                                        span 135
-                                    div.col-md-2
-                                        span 150
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            div.col-lg-4
-                                span 淨成長病人數/年
-                            div.col-lg-8
-                                div.row
-                                    div.col-md-2
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            div.col-lg-4
-                                span 累計淨成長病人數
-                            div.col-lg-8
-                                div.row
-                                    div.col-md-2
-                                    div.col-md-2
-                                        span 90
-                                    div.col-md-2
-                                        span 105
-                                    div.col-md-2
-                                        span 120
-                                    div.col-md-2
-                                        span 135
-                                    div.col-md-2
-                                        span 150
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            div.col-lg-4
-                            div.col-lg-8
-                                div.row
-                                    div.col-md-2 check
-                                    div.col-md-2 OK
-                                    div.col-md-2 OK
-                                    div.col-md-2 OK
-                                    div.col-md-2 OK
-                                    div.col-md-2 OK
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            div.col-lg-4
-                                span 預估點值(HD)
-                            div.col-lg-8
-                                div.row
-                                    div.col-md-2
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            div.col-lg-4
-                                span 預估點值(PD)
-                            div.col-lg-8
-                                div.row
-                                    div.col-md-2
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                                    div.col-md-2
-                                        input.col-md-12.form-control.text-left(type='text', placeholder='11')
-                    .col-lg-12.mb-4
-                        div.list-group.col-lg-12.mb-3
-                            h6
-                                span.icon.icon-calculator
-                                | HD
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.text-success 硬體設備
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2
-                                span 洗腎機
-                            span.text-muted 單價
+                        tr
+                            td 目前人數約
+                            td 75
+                            td 90
+                            td 105
+                            td 120
+                            td 135
+                            td 150
+                        tr
+                            td 淨成長病人數/年
+                            td 
+                            td 
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                        tr
+                            td 累計淨成長病人數
+                            td &nbsp;
+                            td 90
+                            td 105
+                            td 120
+                            td 135
+                            td 150
+                        tr
+                            td 
+                            td check
+                            td OK
+                            td OK
+                            td OK
+                            td OK
+                            td OK
+                        tr
+                            td 預估點值(HD)
+                            td 
+                            td 
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                        tr
+                            td 預估點值(PD)
+                            td 
+                            td 
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+                            td
+                                input.form-control.text-left(type='text', placeholder='11')
+            div.list-group.col-lg-12.mb-3
+                h6
+                    span.icon.icon-calculator
+                    |  HD
+            div.table-responsive.col-12
+                table.table.table.table-bordered.table-hover
+                    thead.table-active
+                        tr
+                            th(colspan="4")
+                                span.text-success 硬體設備
+                    tbody
+                        tr
+                            td.w-25
+                            td 單價
+                            td 數量
+                            td 金額
+                        tr
+                            td.w-25 洗腎機
+                            td 
                                 input.col-md-12.form-control.text-left(type='text', placeholder='')
-                            span.text-muted 數量
-                                input.col-md-12.form-control.text-left(type='text', placeholder='15')
-                            span.text-muted 金額
+                            td 
                                 input.col-md-12.form-control.text-left(type='text', placeholder='')
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2
-                                span 床
-                            span.text-muted 單價
-                                input.col-md-12.form-control.text-left(type='text', placeholder='0.8888')
-                            span.text-muted 數量
-                                input.col-md-12.form-control.text-left(type='text', placeholder='0.8888')
-                            span.text-muted 金額
-                                input.col-md-12.form-control.text-left(type='text', placeholder='0.8888')
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2
-                                span 電視
-                            span.text-muted 單價
-                                input.col-md-12.form-control.text-left(type='text', placeholder='0.8888')
-                            span.text-muted 數量
-                                input.col-md-12.form-control.text-left(type='text', placeholder='0.8888')
-                            span.text-muted 金額
-                                input.col-md-12.form-control.text-left(type='text', placeholder='0.8888')
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.icon.icon-credit.col-md-2
-                                span 總價
-                            div.col-md-6
-                            div.col-md-2
-                                span 總計
-                            div.col-md-2
-                                h4 655,636
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 折舊攤提
-                            span.text-muted 年
-                                input.col-md-12.form-control.text-left(type='text', placeholder='0.8888')
-                            span.col-md-2
-                            span.text-muted 每年
-                                input.col-md-12.form-control.text-left(type='text', placeholder='0.8888')
-                        div.list-group.col-lg-12.mb-3
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.text-success 費用增加部份
-                            | 
-                            span.text-danger 人力
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2
-                            span.col-md-2
-                            span.col-md-2 年薪/人
-                            span.col-md-6 預估增加數量
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2
-                            span.col-md-2
-                            span.col-md-2 (含相關福利)
-                            span.col-md-1 第一年
-                            span.col-md-1 第二年
-                            span.col-md-1 第三年
-                            span.col-md-1 第四年
-                            span.col-md-1 第五年
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.text-danger.col-md-2 固定薪資
-                            span.col-md-2
-                            span.col-md-2 
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 醫師
-                            span.col-md-2
-                            span.col-md-2 360000000
-                            span.col-md-1 1
-                            span.col-md-1 0
-                            span.col-md-1 0
-                            span.col-md-1 0
-                            span.col-md-1 0
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 護理人員
-                            span.col-md-2 100
-                            span.col-md-2 360000000
-                            span.col-md-1 1
-                            span.col-md-1 0
-                            span.col-md-1 0
-                            span.col-md-1 0
-                            span.col-md-1 0
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 醫工
-                            span.col-md-2 
-                            span.col-md-2 360000000
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 行政人員
-                            span.col-md-2 
-                            span.col-md-2 360000000
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1')
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 其他
-                            span.col-md-2 
-                            span.col-md-2
-                                input.col-md-12.form-control.text-left(type='text', placeholder='1000000')
-                            span.col-md-1
-                            span.col-md-1
-                            span.col-md-1
-                            span.col-md-1
-                            span.col-md-1
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.text-danger.col-md-2 變動薪資(獎金)
-                            span.col-md-2
-                            span.col-md-2 
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 醫師
-                            span.col-md-2
-                            span.col-md-2 250
-                            span.col-md-2 /每病人次
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 護理人員/其他
-                            span.col-md-2
-                            span.col-md-2 -
-                            span.col-md-2 /每病人次
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1 
-                            span.col-md-1
-                        div.list-group.col-lg-12.mb-3
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.text-success 費用增加部份
-                            | 
-                            span.text-danger 金額
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2 
-                            span.col-md-2 第一年
-                            span.col-md-2 第二年
-                            span.col-md-2 第三年
-                            span.col-md-2 第四年
-                            span.col-md-2 第五年
-                        div.list-group-item.list-group-item-action.justify-content-between
-                            span.col-md-2.text-danger 固定薪資
-                            span.col-md-2 4,88888889
-                            span.col-md-2 4,88888889
-                            span.col-md-2 4,88888889
-                            span.col-md-2 4,88888889
-                            span.col-md-2 4,88888889
-                            
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='')
+                        tr
+                            td.w-25 床
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='')
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='')
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='')
+                        tr
+                            td.w-25 電視
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='')
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='')
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='')
+                        tr
+                            td.w-25 總價
+                            td 
+                            td 總計
+                            td 
+                                h4.text-danger 655563
+                        tr
+                            td.w-25 折舊攤提
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                                | 年
+                            td 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                                | 每年
+            div.table-responsive.col-12
+                table.table.table.table-bordered.table-hover
+                    thead.table-active
+                        tr
+                            th(colspan="8")
+                                span.text-success 費用增加部份
+                                span.text-danger (人力)
+                    tbody
+                        tr
+                            td(colspan="2").w-25
+                            td.w-10 年薪/人
+                            td(colspan="5") 預估增加數量
+                        tr
+                            td(colspan="2").w-25
+                            td.w-10 (含相關福利)
+                            td 第一年
+                            td 第二年
+                            td 第三年
+                            td 第四年
+                            td 第五年
+                        tr
+                            td(colspan="8")
+                                span.text-danger 固定薪資
+                        tr
+                            td.w-25 醫師
+                            td 
+                            td 360000
+                            td 1
+                            td 0
+                            td 0
+                            td 0
+                            td 0
+                        tr
+                            td.w-25 護理人員
+                            td 100
+                            td 360000
+                            td 1
+                            td 0
+                            td 0
+                            td 0
+                            td 0
+                        tr
+                            td.w-25 醫工
+                            td 
+                            td 360000
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                        tr
+                            td.w-25 行政人員
+                            td 
+                            td 360000
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                        tr
+                            td.w-25 其他
+                            td 
+                            td 
+                                input.col-md-12.form-control.text-left(type='text', placeholder='') 
+                            td
+                            td
+                            td
+                            td
+                            td
+                        tr
+                            td(colspan="8")
+                                span.text-danger 變動薪資(獎金)
+                        tr        
+                            td(colspan="2").w-25 醫師
+                            td 250
+                            td(colspan="5") /每病人次
+                        tr        
+                            td(colspan="2").w-25 護理人員/其他
+                            td -
+                            td(colspan="5") /每病人次
+            div.table-responsive.col-12
+                table.table.table.table-bordered.table-hover
+                    thead.table-active
+                        tr
+                            th(colspan="6")
+                                span.text-success 費用增加部份
+                                span.text-danger (金額)
+                        tr
+                            td.w-20
+                            td 第一年
+                            td 第二年
+                            td 第三年
+                            td 第四年
+                            td 第五年
+                        tr
+                            td.w-20 
+                                span.text-danger 固定薪資
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                        tr
+                            td.w-20 醫師
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                        tr
+                            td.w-20 醫護人員
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                            td 222222666
+                        tr
+                            td.w-20 
+                                span.text-danger 變動薪資(獎金)
+                            td 
+                            td 
+                            td 
+                            td 
+                            td 
+                        tr
+                            td.w-20 醫師
+                            td 
+                            td 
+                            td 
+                            td 
+                            td 
+            div.col-lg-12.mb-5
+                div.row
+                    .list-group.col-lg-3.mb-5
+                        .list-group-item.list-group-item-action.justify-content-between
+                            small.delta-indicator.text-success 房屋租金
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | (月)
+                            span.text-muted 154,000
+                    .list-group.col-lg-3.mb-5
+                        .list-group-item.list-group-item-action.justify-content-between
+                            small.delta-indicator.text-success 營運費用(水,電)
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | (月)
+                            input.col-md-4.form-control(type='text', placeholder='15')
+                    .list-group.col-lg-3.mb-5
+                        .list-group-item.list-group-item-action.justify-content-between
+                            small.delta-indicator.text-success 行政管理費用
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | (每病人次)
+                            input.col-md-4.form-control(type='text', placeholder='15')
+                    .list-group.col-lg-3.mb-5
+                        .list-group-item.list-group-item-action.justify-content-between
+                            small.delta-indicator.text-success 材料成本
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | 藥材類 (人)
+                            span.text-muted 534
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | 藥品類 (人)
+                            br
+                            | (EPO,一般藥品等) 
+                            span.text-muted 196
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | 總計
+                            span.text-muted 730
+                    .list-group.col-lg-12.mb-5
+                        .list-group-item.list-group-item-action.justify-content-between
+                            small.delta-indicator.text-success 利息支出
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | 貸款金額
+                            input.col-md-4.form-control(type='text', placeholder='15')
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | 年利率%
+                            input.col-md-4.form-control(type='text', placeholder='15')
+                        .list-group-item.list-group-item-action.justify-content-between
+                            | 利息支出(年)
+                            span.text-muted -
+                        .list-group-item.list-group-item-action.justify-content-between
+                            div.table-responsive.col-12
+                                table.table.table.table-bordered.table-hover
+                                    thead.table-active
+                                        tr
+                                            th.w-20 人力需求預估參考
+                                            th 現況
+                                            th 第一年
+                                            th 第二年
+                                            th 第三年
+                                            th 第四年
+                                            th 第五年
+                                    tbody
+                                        tr
+                                            td.w-20 增加病人次(年)
+                                            td 937
+                                            td 1,125
+                                            td 3,375
+                                            td 5,625
+                                            td 7,875
+                                            td 10,125
+                                        tr
+                                            td.w-20 病床需求數(預估)
+                                            td 15
+                                            td 18
+                                            td 21
+                                            td 24
+                                            td 27
+                                            td 30
+                                        tr
+                                            td.w-20 醫師需求數(預估)
+                                            td 1
+                                            td 2
+                                            td 2
+                                            td 2
+                                            td 2
+                                            td 2
+                                        tr
+                                            td.w-20 護理人員需求數增加(預估)-累計
+                                            td 9
+                                            td 1
+                                            td 3
+                                            td 5
+                                            td 7
+                                            td 9
+            div.list-group.col-lg-12.mb-3
+                h6
+                    span.icon.icon-calculator
+                    |  PD
+            div.col-lg-12.mb-5
+                .list-group.col-lg-12.mb-5
+                    .list-group-item.list-group-item-action.justify-content-between
+                        small.delta-indicator.text-success 硬體設備
+                    .list-group-item.list-group-item-action.justify-content-between
+                        | 金額
+                        input.col-md-4.form-control(type='text', placeholder='15')
+                    .list-group-item.list-group-item-action.justify-content-between
+                        | 折舊攤提(年)
+                        input.col-md-4.form-control(type='text', placeholder='15')
+                    .list-group-item.list-group-item-action.justify-content-between
+                        | 平均每年
+                        h6.text-danger 1
+            div.table-responsive.col-12
+                table.table.table.table-bordered.table-hover
+                    thead.table-active
+                        tr
+                            th(colspan="8")
+                                span.text-success 費用增加部份
+                                span.text-danger (人事費用)
+                    tbody
+                        tr
+                            td.w-25 醫師
+                            td 現況
+                            td 第一年
+                            td 第二年
+                            td 第三年
+                            td 第四年
+                            td 第五年
+                        tr
+                            td.w-25 Time allocation to PD(增加%)
+                            td 13.0%
+                            td -3.4%
+                            td -0.8%
+                            td 1.6%
+                            td 3.9%
+                            td 6.0%
+                        tr
+                            td.w-25 醫師固定薪資allocated to PD(月)
+                            td 
+                            td 10,000
+                            td 10,000
+                            td 10,000
+                            td 10,000
+                            td 10,000
+                        tr
+                            td.w-25 醫師績效獎金(PPF)/(月/人)
+                            td 1000
+                            td
+                                input.form-control(type='text', placeholder='15')
+                            td 10,000
+                            td 10,000
+                            td 10,000
+                            td 10,000
+                        tr
+                            td.w-25 Time allocation to PD(增加%)
+                            td 13.0%
+                            td -3.4%
+                            td -0.8%
+                            td 1.6%
+                            td 3.9%
+                            td 6.0%
+                        tr
+                            td.w-25 Time allocation to PD(增加%)
+                            td 13.0%
+                            td -3.4%
+                            td -0.8%
+                            td 1.6%
+                            td 3.9%
+                            td 6.0%
+                    tbody
+                        tr
+                            td(colspan="7") 護理人員
+                        tr
+                            td.w-25 PD病人數(Est.)
+                            td 35
+                            td 50
+                            td 65
+                            td 80
+                            td 95
+                            td 110
                 .dashhead-subtitle.text-center ® 版權所有 百特醫療產品股份有限公司 - Baxter Taiwan Version 1.0
 block bottomScripts
     script.

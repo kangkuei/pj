@@ -13,13 +13,17 @@ var app = new Vue({
     data: {
         awardLists: [],
         popupOpen: false,
+        noitems: [
+            { gifts: "沒獎", quantity: "55", change: "55%"},
+            { gifts: "沒獎", quantity: "55", change: "55%"},
+        ],
+        items: [
+            { gifts: "有獎", quantity: "55", change: "55%",},
+        ],
     },
     props: {
     },
     watch: {
-        popupOpen: function() {
-
-        }
     },
     computed: {
     },
@@ -152,7 +156,7 @@ var app = new Vue({
             draw();
         },
         getAwardstatus: function() {
-            /// 再麻煩套成獲取api的版本
+            /// 僅是示意 請換成api再麻煩真實版本
             var vm = this;
 
             //清空列表
@@ -167,6 +171,7 @@ var app = new Vue({
                     }
                 )
             }
+
         },
         openPopup: function() {
             var vm = this;

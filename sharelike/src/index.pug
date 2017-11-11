@@ -4,8 +4,45 @@ extends _layout.pug
 //- page html
 block page_main
     section.index
-        div.kv
-        div.popup__bg
+        div.kv(v-on:click="popupOpen=true")
+        div
+            ul
+                li
+                li
+                li
+                li
+                li
+        div.popup(v-show="popupOpen" v-cloak)
+            div.popup__mask
+            div.popup__content
+                // 獎品剩餘列表
+                div.awardList(style="display:none")
+                    div.awardList__hd
+                        h3.title 獎品獎品獎品獎
+                    div.awardList__bd
+                        div.list
+                            ul.list__header.clearfix
+                                li 獎品
+                                li 數量
+                                li 中獎機率
+                            div.list-wrap
+                                ul.list__item.clearfix(v-for="value in noitems").isOver
+                                    li.col {{value.gifts}}
+                                    li.col {{value.quantity}}
+                                    li.col {{value.change}}
+                                ul.list__item.clearfix(v-for="value in items")
+                                    li.col {{value.gifts}}
+                                    li.col {{value.quantity}}
+                                    li.col {{value.change}}
+                    div.awardList-btn
+                //- button(v-on:click="popupOpen=false") closePopup()
+                // 獎品兌換完畢
+                div.noAward
+                    div.noAward-btn
+                // 刮刮樂
+                // 隱私權條款
+                // custom
+        div.popup__bg(style="display:none")
             div.popup__nogift
                 div.popup__nogift--x
             div.popup__list
@@ -43,5 +80,5 @@ block page_main
             div.popup__block4
                 div.popup__block4--x
 block bottomScripts
-    script(src="../js/app.js")
+    script(src="../js/app-dev.js")
 

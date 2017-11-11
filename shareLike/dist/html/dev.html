@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" lang="zh-TW">
+<!--page default Information-->
+<!--html head-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge,chrome=1">
+    <title>首頁</title>
+    <meta name="description" content="#{pageDesc}">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta itemprop="name" content="#{pageTitle}">
+    <meta itemprop="description" content="#{pageDesc}">
+    <meta itemprop="image" content="指定顯示圖片">
+    <meta property="og:title" content="#{pageTitle}">
+    <meta property="og:description" content="#{pageDesc}">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="指定顯示圖片">
+    <link rel="Shortcut Icon" type="images/x-icon" href="../images/fav.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <!--CDN link -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mobile-detect/0.4.3/mobile-detect.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="lib/vue.js"></script>
+</head>
+<!--html body-->
+
+<body>
+    <div class="l-wrap" id="app">
+        <!-- render nav view-->
+        <div class="l-main">
+            <section class="function">
+                <div class="l-container">
+                    <button v-on:click="initCoupon()">initCoupon()</button>
+                    <button v-on:click="getAwardstatus()">getAwardstatus()</button>
+                    <button v-on:click="popupOpen=true">openPopup()</button>
+                </div>
+                <div class="coupon coupon--type1">
+                    <div class="coupon__award"></div>
+                    <div class="coupon__cover"></div>
+                </div>
+                <ul v-for="award in awardLists">
+                    <li>{{award.text}}{{award.amount}}{{award.chance}}</li>
+                </ul>
+                <div class="popup" v-show="popupOpen">
+                    <div class="popup__mask"></div>
+                    <div class="popup__content">
+                        <button v-on:click="popupOpen=false">closePopup()</button>
+                    </div>
+                </div>
+            </section>
+            <!--render main view-->
+        </div>
+    </div>
+    <div class="l-footer footer">
+        <div class="l-container">
+            <p>footer</p>
+        </div>
+    </div>
+    <script src="js/app-dev.js?v=1"></script>
+</body>
+
+</html>

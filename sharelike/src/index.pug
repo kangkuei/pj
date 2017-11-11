@@ -15,14 +15,16 @@ block page_main
                     li 中獎機率
                 div.popup__list__content
                     ul.popup__list__item
-                        v-for
-                            li.no
-                            li.no
-                        v-for
-                            li.yes
-                            li.yes
+                        li(v-for="value in noitems").no
+                            div {{value.gifts}}
+                            div {{value.quantity}}
+                            div {{value.change}}
+                        li(v-for="value in items").yes
+                            div {{value.gifts}}
+                            div {{value.quantity}}
+                            div {{value.change}}
                 div.popup__list--x
-                div.popup__list--stmp
+                //div.popup__list--stmp
             div.popup__register
                 div.popup__register--x
                 h2.popup__register__title 隱私權條款

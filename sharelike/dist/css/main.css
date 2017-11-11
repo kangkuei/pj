@@ -720,12 +720,12 @@ body {
   right: -3vw;
 }
 
-<<<<<<< HEAD
 .demo-ctrl {
   position: absolute;
   left: 0;
   top: 0;
-=======
+}
+
 .register {
   background: url(../images/bg-register.png) 0 0 no-repeat;
   background-size: auto 100%;
@@ -833,7 +833,6 @@ body {
   position: absolute;
   top: 3vw;
   right: -3vw;
->>>>>>> d5b75aee0cf5b22796ab9646395647a13c7f8cc0
 }
 
 /*===============================

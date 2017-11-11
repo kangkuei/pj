@@ -64,6 +64,14 @@ var app = new Vue({
         showCtrl: false, 
         selectOpt: "",
         selectLists: lists,
+
+        noitems: [
+            { gifts: "末獎", quantity: "55", change: "55%"},
+            { gifts: "5獎", quantity: "55", change: "55%"},
+        ],
+        items: [
+            { gifts: "大獎", quantity: "55", change: "55%",},
+        ],
     },
     props: {
     },

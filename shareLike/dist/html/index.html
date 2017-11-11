@@ -44,18 +44,20 @@
                         </ul>
                         <div class="popup__list__content">
                             <ul class="popup__list__item">
-                                <v-for>
-                                    <li class="no"></li>
-                                    <li class="no"></li>
-                                </v-for>
-                                <v-for>
-                                    <li class="yes"></li>
-                                    <li class="yes"></li>
-                                </v-for>
+                                <li class="no" v-for="value in noitems">
+                                    <div>{{value.gifts}}</div>
+                                    <div>{{value.quantity}}</div>
+                                    <div>{{value.change}}</div>
+                                </li>
+                                <li class="yes" v-for="value in items">
+                                    <div>{{value.gifts}}</div>
+                                    <div>{{value.quantity}}</div>
+                                    <div>{{value.change}}</div>
+                                </li>
                             </ul>
                         </div>
                         <div class="popup__list--x"></div>
-                        <div class="popup__list--stmp"></div>
+                        <!--div.popup__list--stmp-->
                     </div>
                     <div class="popup__register">
                         <div class="popup__register--x"></div>

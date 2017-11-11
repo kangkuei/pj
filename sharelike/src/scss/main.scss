@@ -127,7 +127,7 @@ $boxShadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
                 left: 0;
             }
             &__content {
-                width: vw(290);
+                //width: vw(290);
                 height: vw(180);
                 overflow-y: auto;
             }
@@ -149,6 +149,41 @@ $boxShadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
                     }
                 }
             }
+            &__item {
+                width: vw(270);
+                margin: vw(10) auto 0;
+                li {
+                    border-bottom: 1px solid #666;
+                    //margin: vw(10) 0;
+                    padding: vw(8) vw(10);
+                    position: relative;
+                    div {
+                        font-size: vw(14);
+                        display: inline-block;
+                        text-align: center;
+                        &:nth-child(1) {
+                            width: vw(80);
+                        }
+                        &:nth-child(2) {
+                            width: vw(70);
+                        }
+                        &:nth-child(3) {
+                            width: vw(80);
+                        }
+                    }
+                }
+                li.no {
+                    color: #ccc;
+                    &:nth-child(odd) {
+                        background: url(../images/stmp-pic-1.png) 0 0 no-repeat;
+                        background-position-x: vw(0);
+                    }
+                    &:nth-child(even) {
+                        background: url(../images/stmp-pic-1.png) 0 0 no-repeat;
+                        background-position-x: vw(235);
+                    }
+                }
+            }
         }
         &__register {
             background: url(../images/bg-register.png) 0 0 no-repeat;
@@ -159,7 +194,7 @@ $boxShadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
             top: 50%;
             left: 50%;
             margin: vw(-147) 0 0 vw(-150);
-            //display: none;
+            display: none;
             &--x {
                 background: url(../images/btn-x.png) 0 0 no-repeat;
                 background-size: auto 100%;

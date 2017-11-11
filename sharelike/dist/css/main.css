@@ -579,117 +579,6 @@ body {
   left: 0;
 }
 
-.popup__register {
-  background: url(../images/bg-register.png) 0 0 no-repeat;
-  background-size: auto 100%;
-  width: 30vw;
-  height: 29.4vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -14.7vw 0 0 -15vw;
-  display: none;
-}
-
-.popup__register--x {
-  background: url(../images/btn-x.png) 0 0 no-repeat;
-  background-size: auto 100%;
-  cursor: pointer;
-  width: 2.2vw;
-  height: 2.2vw;
-  position: absolute;
-  top: 0vw;
-  right: -6vw;
-}
-
-.popup__register__title {
-  color: #666;
-  font-weight: 600;
-  letter-spacing: 1.2px;
-  text-align: center;
-  margin: 0.5vw auto 0;
-}
-
-.popup__register__content {
-  color: #666;
-  margin: 3vw auto 0;
-  overflow-y: auto;
-  width: 26vw;
-  height: 18.6vw;
-}
-
-.popup__register ul li {
-  font-size: 1.2vw;
-  line-height: 1.2;
-  list-style-type: disc;
-  margin-left: 1.5vw;
-}
-
-.popup__register ol li {
-  font-size: 1.2vw;
-  line-height: 1.2;
-  list-style-type: decimal;
-  margin-left: 1.5vw;
-}
-
-.popup__register__btnarea {
-  text-align: center;
-  margin-top: 1vw;
-}
-
-.popup__register__submit {
-  background: #fff;
-  border: 3px solid #c32a31;
-  border-radius: 1.5vw;
-  font-size: 1.4vw;
-  font-weight: bold;
-  color: #c32a31;
-  display: inline-block;
-  width: 7vw;
-  height: 3vw;
-  text-align: center;
-  line-height: 3vw;
-  margin: 0 0.5vw;
-}
-
-.popup__register__cancel {
-  background: #fff;
-  border: 3px solid #aaa;
-  border-radius: 1.5vw;
-  font-size: 1.4vw;
-  font-weight: bold;
-  color: #aaa;
-  display: inline-block;
-  width: 7vw;
-  height: 3vw;
-  text-align: center;
-  line-height: 3vw;
-  margin: 0 0.5vw;
-}
-
-.popup__block4 {
-  background: url(../images/bg-block4.png) 0 0 no-repeat;
-  background-size: auto 100%;
-  width: 30vw;
-  height: 36.4vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -18.2vw 0 0 -15vw;
-  display: none;
-}
-
-.popup__block4--x {
-  background: url(../images/btn-x.png) 0 0 no-repeat;
-  background-size: auto 100%;
-  cursor: pointer;
-  width: 2.2vw;
-  height: 2.2vw;
-  position: absolute;
-  top: 3vw;
-  right: -3vw;
-}
-
 .kv {
   position: relative;
   background: url(../images/index_kv.jpg) center bottom no-repeat;
@@ -821,6 +710,115 @@ body {
 }
 
 .noAward-btn {
+  background: url(../images/btn-x.png) 0 0 no-repeat;
+  background-size: auto 100%;
+  cursor: pointer;
+  width: 2.2vw;
+  height: 2.2vw;
+  position: absolute;
+  top: 3vw;
+  right: -3vw;
+}
+
+.register {
+  background: url(../images/bg-register.png) 0 0 no-repeat;
+  background-size: auto 100%;
+  width: 30vw;
+  height: 29.4vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -14.7vw 0 0 -15vw;
+}
+
+.register-btn {
+  background: url(../images/btn-x.png) 0 0 no-repeat;
+  background-size: auto 100%;
+  cursor: pointer;
+  width: 2.2vw;
+  height: 2.2vw;
+  position: absolute;
+  top: 0vw;
+  right: -6vw;
+}
+
+.register__title {
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-align: center;
+  margin: 0.5vw auto 0;
+}
+
+.register__content {
+  color: #666;
+  margin: 3vw auto 0;
+  overflow-y: auto;
+  width: 26vw;
+  height: 18.6vw;
+}
+
+.register ul li {
+  font-size: 1.2vw;
+  line-height: 1.2;
+  list-style-type: disc;
+  margin-left: 1.5vw;
+}
+
+.register ol li {
+  font-size: 1.2vw;
+  line-height: 1.2;
+  list-style-type: decimal;
+  margin-left: 1.5vw;
+}
+
+.register__btnarea {
+  text-align: center;
+  margin-top: 1vw;
+}
+
+.register__submit {
+  background: #fff;
+  border: 3px solid #c32a31;
+  border-radius: 1.5vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+  color: #c32a31;
+  display: inline-block;
+  width: 7vw;
+  height: 3vw;
+  text-align: center;
+  line-height: 3vw;
+  margin: 0 0.5vw;
+}
+
+.register__cancel {
+  background: #fff;
+  border: 3px solid #aaa;
+  border-radius: 1.5vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+  color: #aaa;
+  display: inline-block;
+  width: 7vw;
+  height: 3vw;
+  text-align: center;
+  line-height: 3vw;
+  margin: 0 0.5vw;
+}
+
+.block4 {
+  background: url(../images/bg-block4.png) 0 0 no-repeat;
+  background-size: auto 100%;
+  width: 30vw;
+  height: 36.4vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -18.2vw 0 0 -15vw;
+}
+
+.block4-btn {
   background: url(../images/btn-x.png) 0 0 no-repeat;
   background-size: auto 100%;
   cursor: pointer;

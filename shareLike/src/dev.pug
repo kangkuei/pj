@@ -1,0 +1,22 @@
+﻿//- page laytout name
+extends _layout.pug
+
+//- page html
+block page_main
+    section.function
+        div.l-container
+            button(v-on:click="initCoupon()") initCoupon()
+            button(v-on:click="getAwardstatus()") getAwardstatus()
+            button(v-on:click="popupOpen=true") openPopup()
+        div.coupon.coupon--type1
+            div.coupon__award
+            div.coupon__cover
+                //- canvas#myCanvas
+        ul(v-for="award in awardLists")
+            li {{award.text}}{{award.amount}}{{award.chance}}
+        div.popup(v-show="popupOpen")
+            div.popup__mask
+            div.popup__content
+                button(v-on:click="popupOpen=false") closePopup()
+block bottomScripts
+    script(src="js/app-dev.js?v=1")

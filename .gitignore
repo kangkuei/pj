@@ -183,3 +183,5 @@ template/missionForBarGenerator/prepros.cfg
 template/fbLive_otb/images/DEMO_1.mp4
 template/fbLive_otb/images/DEMO_1.gif
 template/ctbcHomebank/prepros-6.config
+
+/node_modules/*

@@ -5,13 +5,18 @@ extends _layout.pug
 block page_main
     section.index
         div.kv(v-on:click="popupOpen=true")
-        div
+        div.demo-ctrl
             ul
+                li 
+                    button 還有獎品
                 li
+                    button 沒有獎品
                 li
+                    button 刮刮樂
                 li
+                    button 隱私權條款
                 li
-                li
+                    button 客製化項目
         div.popup(v-show="popupOpen" v-cloak)
             div.popup__mask
             div.popup__content

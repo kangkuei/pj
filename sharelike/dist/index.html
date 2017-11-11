@@ -29,13 +29,23 @@
       <div class="l-main">
         <section class="index">
           <div class="kv" v-on:click="popupOpen=true"></div>
-          <div>
+          <div class="demo-ctrl">
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li> 
+                <button>還有獎品</button>
+              </li>
+              <li>
+                <button>沒有獎品</button>
+              </li>
+              <li>
+                <button>刮刮樂</button>
+              </li>
+              <li>
+                <button>隱私權條款</button>
+              </li>
+              <li>
+                <button>客製化項目</button>
+              </li>
             </ul>
           </div>
           <div class="popup" v-show="popupOpen" v-cloak>

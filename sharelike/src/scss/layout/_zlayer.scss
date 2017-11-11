@@ -1,0 +1,17 @@
+﻿$z-layers: (
+    'modal':            5000,
+    'dropdown':         4000,
+    'default':             1,
+    'bottomless-pit': -10000
+);
+
+@function z($layer) {
+    @if not map-has-key($z-layers, $layer) {
+        @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
+    }
+    @return map-get($z-layers, $layer);
+}
+
+$elements: hd, bd, ft;
+// We can use the Sass index function 
+// to assign a z-index value to each element.

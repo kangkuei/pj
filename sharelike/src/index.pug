@@ -10,7 +10,7 @@ block page_main
                 li 
                     button 還有獎品
                 li
-                    button 沒有獎品
+                    button(v-on:click="start(false)") 沒有獎品
                 li
                     button 刮刮樂
                 li
@@ -46,11 +46,11 @@ block page_main
                     div.noAward-btn
                 // 刮刮樂
                 // 隱私權條款
-                div.register
-                    div.register-btn
-                    h2.register__title 隱私權條款
-                    div.register__content
-                        div.register__rule
+                div.rule
+                    div.rule-btn
+                    h2.rule__title 隱私權條款
+                    div.rule__content
+                        div.rule__rule
                             p 於Sharelike的服務於Sharelike的服務於Sharelike的服務於Sharelike的服務於Sharelike的服務
                             br
                             ul
@@ -59,9 +59,9 @@ block page_main
                             ol
                                 li 於Sharelike的服務於Sharelike的服務於Share於Sharelike的服務於Sharelike的服務於Share
                                 li 於Sharelike的服務於Sharelike的服務於Share於Sharelike的服務於Sharelike的服務於Share於Sharelike的服務於Sharelike的服務於Share於Sharelike的服務於Sharelike的服務於Share
-                    div.register__btnarea
-                        a(href="javascript:").register__submit 註冊
-                        a(href="javascript:").register__cancel 取消
+                    div.rule__btnarea
+                        a(href="javascript:").rule__submit 註冊
+                        a(href="javascript:").rule__cancel 取消
                 // custom
                 div.custom
                     div.custom-btn

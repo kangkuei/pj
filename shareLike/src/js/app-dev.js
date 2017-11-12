@@ -28,6 +28,14 @@ var app = new Vue({
     computed: {
     },
     methods: {
+        start: function(hasAward) {
+            var vm = this;
+            if(hasAward) {
+
+            } else {
+                vm.popupOpen = true;
+            }
+        },
         initCoupon: function() {
             var vm = this;
             // 取得獎品
@@ -173,10 +181,10 @@ var app = new Vue({
             }
 
         },
-        openPopup: function() {
-            var vm = this;
-            vm.popupOpen = true;
-        }
+        // openPopup: function() {
+        //     var vm = this;
+        //     vm.popupOpen = true;
+        // }
     },
     created: function () {
     },

@@ -720,13 +720,7 @@ body {
   right: -3vw;
 }
 
-.demo-ctrl {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.register {
+.rule {
   background: url(../images/bg-register.png) 0 0 no-repeat;
   background-size: auto 100%;
   width: 30vw;
@@ -737,7 +731,7 @@ body {
   margin: -14.7vw 0 0 -15vw;
 }
 
-.register-btn {
+.rule-btn {
   background: url(../images/btn-x.png) 0 0 no-repeat;
   background-size: auto 100%;
   cursor: pointer;
@@ -748,7 +742,7 @@ body {
   right: -6vw;
 }
 
-.register__title {
+.rule__title {
   color: #666;
   font-weight: 600;
   letter-spacing: 1.2px;
@@ -756,7 +750,7 @@ body {
   margin: 0.5vw auto 0;
 }
 
-.register__content {
+.rule__content {
   color: #666;
   margin: 3vw auto 0;
   overflow-y: auto;
@@ -764,26 +758,26 @@ body {
   height: 18.6vw;
 }
 
-.register ul li {
+.rule ul li {
   font-size: 1.2vw;
   line-height: 1.2;
   list-style-type: disc;
   margin-left: 1.5vw;
 }
 
-.register ol li {
+.rule ol li {
   font-size: 1.2vw;
   line-height: 1.2;
   list-style-type: decimal;
   margin-left: 1.5vw;
 }
 
-.register__btnarea {
+.rule__btnarea {
   text-align: center;
   margin-top: 1vw;
 }
 
-.register__submit {
+.rule__submit {
   background: #fff;
   border: 3px solid #c32a31;
   border-radius: 1.5vw;
@@ -798,7 +792,7 @@ body {
   margin: 0 0.5vw;
 }
 
-.register__cancel {
+.rule__cancel {
   background: #fff;
   border: 3px solid #aaa;
   border-radius: 1.5vw;
@@ -933,3 +927,8 @@ button {
 }
 
 /*=====  End of william  ======*/
+.demo-ctrl {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

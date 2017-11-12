@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zn-TW">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <h1 v-cloak>{{ message }}</h1>
+                <p>{{$data}}</p>
+                <canvas id="myChart"></canvas>
+                <button type="button" class="btn btn-primary mb-3" v-on:click="getData">取資料</button>
+                <br>
+                <button type="button" class="btn btn-primary" v-on:click="voteTo(1)">答對0~5</button>
+                <button type="button" class="btn btn-primary" v-on:click="voteTo(2)">答對6~10</button>
+                <button type="button" class="btn btn-primary" v-on:click="voteTo(3)">答對11~15</button>
+                <button type="button" class="btn btn-primary" v-on:click="voteTo(4)">投票16~20</button>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" />
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            var app = new Vue({
+            el: '#app',
+                data: {
+                    message: '統包測試',
+                    result: {},
+                },
+                computed: {
+                    vote1per: function() {
+                        return this
+                    }
+                },
+                methods:{
+                    initChart: function() {
+                        var vm = this;
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        var chartData = {
+                            "labels": ["0-5", "6-10", "11-15", "16-20"],
+                            "datasets": [{
+                                "label": "資料組",
+                                "data": [vm.result.vote1, vm.result.vote2, vm.result.vote3,vm.result.vote4,],
+                                "fill": false,
+                                "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"],
+                                "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                                "borderWidth": 1
+                            }]
+                        };
+                        var chartOpts = {
+                            title: {
+                                display: false,
+                                text: 'Custom Chart Title'
+                            }
+                        };
+                        var myBarChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: chartData,
+                            option: chartOpts
+                        }); 
+                    },
+                    getData: function(){
+                        var vm = this;
+                        var database = firebase.database();
+
+                        firebase.database().ref('result/').on('value', function(snapshot) {
+                            console.log(snapshot.val())
+                            vm.result = snapshot.val();
+                            vm.initChart();
+                        });                        
+                    },
+                    voteTo: function(index){
+                        var vm = this;
+                        voteTa = 'result/vote'+index;
+                        var voteRef = firebase.database().ref(voteTa);
+
+                        voteRef.transaction(function(currentData){
+                            return currentData + 1;
+                        });
+
+                        vm.getData();
+                    }
+                },
+                mounted: function() {
+                    var vm = this;
+
+                    var config = {
+                        apiKey: "AIzaSyCDi4r_BBmpJCBf7_w0S_dIjBpfyh4dFHE",
+                        authDomain: "unibread-15fcb.firebaseapp.com",
+                        databaseURL: "https://unibread-15fcb.firebaseio.com",
+                        projectId: "unibread-15fcb",
+                        storageBucket: "unibread-15fcb.appspot.com",
+                        messagingSenderId: "253003018823"
+                    };
+
+                    firebase.initializeApp(config);                     
+                }
+            })
+        </script>
+    </body>
+</html>
+<!-- 
+new Chart(document.getElementById("chartjs-1"), {
+    "type": "bar",
+    "data": 
+    "options": {
+        "scales": {
+            "yAxes": [{
+                "ticks": {
+                    "beginAtZero": true
+                }
+            }]
+        }
+    }
+}); -->

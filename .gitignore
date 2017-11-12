@@ -185,3 +185,4 @@ template/fbLive_otb/images/DEMO_1.gif
 template/ctbcHomebank/prepros-6.config
 
 /node_modules/*
+*/node_modules/*
